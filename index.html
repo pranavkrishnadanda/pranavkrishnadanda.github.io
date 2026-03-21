@@ -161,10 +161,11 @@
                             <span class="timeline-date">Mar 2025 &mdash; Present</span>
                         </div>
                         <ul class="timeline-points">
-                            <li>Built <strong>3 autonomous AI agent systems</strong> &mdash; an inline clinical query agent, an EDC validation engine, and a Claude-powered multi-tool framework &mdash; automating data verification for doctors across <strong>27 clinical trial sites</strong>.</li>
-                            <li>Developed <strong>77 AI-driven validation rules</strong> executing 10,000+ runs across 48,000+ clinical records, catching discrepancies before human reviewers.</li>
-                            <li>Designed a clinical data platform spanning <strong>151 PostgreSQL tables</strong> across 13 schemas, <strong>86+ REST endpoints</strong>, and 183 electronic case report forms.</li>
-                            <li>Integrated custom <strong>MCP servers</strong> with AI pipelines and architected deployment across <strong>AWS ECS Fargate, Aurora, SQS, S3, and Cognito</strong> with BDD test automation.</li>
+                            <li>Built <strong>3 autonomous AI agent systems</strong> from scratch &mdash; an inline clinical query agent, an EDC validation engine, and a Claude-powered multi-tool framework &mdash; now live across <strong>27 clinical trial sites</strong></li>
+                            <li>Designed and shipped a <strong>message-driven validation pipeline</strong> processing <strong>78.6K+ clinical records</strong> against 77 configurable rules, catching discrepancies before human reviewers ever see them</li>
+                            <li>Selected <strong>SQS over direct API calls</strong> to guarantee message durability and decouple processing load from clinical data ingestion</li>
+                            <li>Architected backend infrastructure across <strong>AWS ECS Fargate, Aurora PostgreSQL, SQS, S3, and Cognito</strong></li>
+                            <li>Integrated custom <strong>MCP servers</strong> into AI pipelines, enabling natural language querying of production clinical databases</li>
                         </ul>
                         <div class="timeline-tags">
                             <span>Python</span><span>Claude API</span><span>MCP</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span><span>SQS</span>
@@ -177,18 +178,19 @@
                     <div class="timeline-card">
                         <div class="timeline-header">
                             <div>
-                                <h3 class="timeline-role">Machine Learning Engineer Intern</h3>
+                                <h3 class="timeline-role">ML Engineer Intern</h3>
                                 <p class="timeline-company">Mushroom Solutions</p>
                             </div>
                             <span class="timeline-date">Mar 2024 &mdash; Mar 2025</span>
                         </div>
                         <ul class="timeline-points">
-                            <li>Trained deep learning classification models achieving <strong>92% accuracy</strong> on 15,400+ records, automating 17 workflows and cutting manual processing by <strong>20 hours/week</strong>.</li>
-                            <li>Engineered an intelligent chatbot combining <strong>Azure AI Search with FAISS</strong>, Redis caching, and RabbitMQ &mdash; serving <strong>5,000 queries/day</strong>.</li>
-                            <li>Built Django REST APIs with role-based access control serving ML inference to <strong>20 concurrent users</strong> across 4 internal teams.</li>
+                            <li>Trained deep learning classification models hitting <strong>97.8% accuracy</strong> on 15,400+ records &mdash; automated 17 workflows, eliminating <strong>22 hrs/week</strong> of manual processing</li>
+                            <li>Built an intelligent <strong>RAG chatbot</strong> combining Azure AI Search + FAISS with Redis caching, serving <strong>5,000 queries/day</strong></li>
+                            <li>Shipped <strong>Django REST APIs</strong> with role-based access control, serving ML inference across 4 internal teams</li>
+                            <li>Covered agent tool execution and edge cases with <strong>end-to-end test automation</strong> using Behave BDD</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>TensorFlow</span><span>Keras</span><span>FAISS</span><span>Django</span><span>Redis</span><span>Azure AI</span>
+                            <span>TensorFlow</span><span>Keras</span><span>FAISS</span><span>Django</span><span>Redis</span><span>Azure AI Search</span>
                         </div>
                     </div>
                 </div>
