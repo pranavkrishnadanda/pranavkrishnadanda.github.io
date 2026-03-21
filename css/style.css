@@ -471,6 +471,30 @@ strong { color: var(--text-primary); font-weight: 600; }
     50% { opacity: 1; transform: scaleY(1.2); }
 }
 
+/* ---------- Currently Building Strip ---------- */
+.currently-building {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.currently-building-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
 /* ============================================
    ABOUT
    ============================================ */
