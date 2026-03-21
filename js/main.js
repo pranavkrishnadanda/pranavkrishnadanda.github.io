@@ -5,49 +5,6 @@
 (function () {
     'use strict';
 
-    // ---------- Typing Effect ----------
-    const typingElement = document.getElementById('typingText');
-    const phrases = [
-        'AI Engineer',
-        'Building Autonomous Agents',
-        'Full-Stack Developer',
-        'Shipping Production ML Systems',
-        'Python | TypeScript | AWS'
-    ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 80;
-
-    function type() {
-        const currentPhrase = phrases[phraseIndex];
-
-        if (isDeleting) {
-            typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 40;
-        } else {
-            typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 80;
-        }
-
-        if (!isDeleting && charIndex === currentPhrase.length) {
-            typingSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            typingSpeed = 400; // Pause before new word
-        }
-
-        setTimeout(type, typingSpeed);
-    }
-
-    if (typingElement) {
-        setTimeout(type, 1000);
-    }
-
     // ---------- Navbar Scroll ----------
     const navbar = document.getElementById('navbar');
 
