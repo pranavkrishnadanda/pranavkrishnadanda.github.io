@@ -561,6 +561,38 @@ strong { color: var(--text-primary); font-weight: 600; }
     font-weight: 500;
 }
 
+.stat-sublabel {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-style: italic;
+}
+
+.open-to-work {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.open-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: pulse-dot 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
 /* ============================================
    EXPERIENCE
    ============================================ */
