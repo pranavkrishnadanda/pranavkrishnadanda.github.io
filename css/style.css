@@ -1001,6 +1001,75 @@ strong { color: var(--text-primary); font-weight: 600; }
 }
 
 /* ============================================
+   BLOG
+   ============================================ */
+.blog-intro {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    transition: border-color var(--transition);
+}
+
+.blog-card--placeholder {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.blog-card-icon {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.blog-card-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: rgba(100, 116, 139, 0.15);
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.blog-card-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.blog-subscribe {
+    text-align: center;
+}
+
+.blog-subscribe-link {
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition);
+}
+
+.blog-subscribe-link:hover { color: var(--accent-purple); }
+
+/* ============================================
    CONTACT
    ============================================ */
 .contact-intro {
