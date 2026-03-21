@@ -152,6 +152,22 @@
         });
     }
 
+    // ---------- Projects Tab Switcher ----------
+    var projectTabs = document.querySelectorAll('.projects-tab');
+    projectTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var group = this.getAttribute('data-group');
+            projectTabs.forEach(function(t) { t.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.project-group').forEach(function(g) {
+                g.classList.toggle('hidden', g.getAttribute('data-group') !== group);
+            });
+        });
+        tab.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
+        });
+    });
+
     // ---------- Smooth Scroll for Anchor Links ----------
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
