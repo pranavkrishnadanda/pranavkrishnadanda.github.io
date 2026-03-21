@@ -1086,6 +1086,16 @@ strong { color: var(--text-primary); font-weight: 600; }
     gap: 20px;
 }
 
+.contact-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
 .contact-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
