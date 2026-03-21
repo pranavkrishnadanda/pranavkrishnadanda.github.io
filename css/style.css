@@ -210,6 +210,22 @@ strong { color: var(--text-primary); font-weight: 600; }
     box-shadow: 0 4px 20px rgba(129, 140, 248, 0.3);
 }
 
+.nav-link--resume {
+    background: var(--accent-secondary);
+    color: var(--bg-primary);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.nav-link--resume::after { display: none; }
+
+.nav-link--resume:hover {
+    background: #06b6d4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;

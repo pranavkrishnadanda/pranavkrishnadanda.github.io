@@ -84,7 +84,7 @@
 
     // ---------- Active Nav Link ----------
     const sections = document.querySelectorAll('.section, .hero');
-    const navLinks = document.querySelectorAll('.nav-link:not(.nav-link--cta)');
+    const navLinks = document.querySelectorAll('.nav-link:not(.nav-link--cta):not(.nav-link--resume)');
 
     function updateActiveNav() {
         var scrollPos = window.scrollY + 200;
