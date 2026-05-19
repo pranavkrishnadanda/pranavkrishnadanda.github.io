@@ -118,21 +118,18 @@
         requestAnimationFrame(step);
     }
 
-    var statsObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                statsObserver.unobserve(entry.target);
+    var statsGrid = document.querySelector('.stats-grid');
+    if (statsGrid && statNumbers.length) {
+        var statsTriggered = false;
+        var statsObserver = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting && !statsTriggered) {
+                statsTriggered = true;
+                statNumbers.forEach(function (el) { animateCounter(el); });
+                statsObserver.disconnect();
             }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -20px 0px'
-    });
-
-    statNumbers.forEach(function (el) {
-        statsObserver.observe(el);
-    });
+        }, { threshold: 0.2 });
+        statsObserver.observe(statsGrid);
+    }
 
     // ---------- Back to Top ----------
     var backToTop = document.getElementById('backToTop');

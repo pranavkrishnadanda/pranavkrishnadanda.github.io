@@ -1069,6 +1069,66 @@ strong { color: var(--text-primary); font-weight: 600; }
 
 .blog-subscribe-link:hover { color: var(--accent-purple); }
 
+.blog-card--published {
+    display: block;
+    text-decoration: none;
+    border-color: rgba(129, 140, 248, 0.2);
+    cursor: pointer;
+    transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+
+.blog-card--published:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-3px);
+}
+
+.blog-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.blog-card-badge--published {
+    background: rgba(129, 140, 248, 0.15);
+    color: var(--accent-primary);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+.blog-card-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-left: auto;
+}
+
+.blog-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.blog-card-tags span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: rgba(148, 163, 184, 0.08);
+    padding: 2px 8px;
+    border-radius: 100px;
+}
+
+.blog-card-read-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    letter-spacing: 0.01em;
+}
+
 /* ============================================
    CONTACT
    ============================================ */
