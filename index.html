@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranav Krishna Danda | Software Engineer</title>
-    <meta name="description" content="AI & Backend Engineer with 2 years of production experience. Building autonomous Claude API agents, Kafka pipelines, and distributed AI systems. Open to full-time roles.">
-    <meta name="keywords" content="Software Engineer, AI Systems, Backend Engineer, Python, FastAPI, AWS, Pranav Krishna Danda">
+    <meta name="description" content="Software Engineer building production distributed systems on Python + AWS + Postgres — with multimodal LLM features wired in safely. 27 production deployments, 78.6K+ records processed. Open to full-time roles.">
+    <meta name="keywords" content="Software Engineer, Backend Engineer, Distributed Systems, Python, FastAPI, AWS, LLM, Claude Agent SDK, MCP, Pranav Krishna Danda">
     <meta name="author" content="Pranav Krishna Danda">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Pranav Krishna Danda | Software Engineer">
-    <meta property="og:description" content="Software Engineer building autonomous AI agents and backend infrastructure at production scale.">
+    <meta property="og:description" content="Software Engineer building production distributed systems — REST APIs, queue workers, LLM features. 27 production deployments.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pranavkrishnadanda.in">
 
@@ -63,8 +63,8 @@
             <h1 class="hero-name reveal">Pranav Krishna<br>Danda</h1>
             <p class="hero-subtitle reveal">Software Engineer</p>
             <p class="hero-description reveal">
-                Building production AI systems — autonomous agents,
-                backend infrastructure, and LLM pipelines at scale.
+                Backend engineer building distributed systems on Python + AWS + Postgres —
+                with multimodal LLM features wired into them safely.
             </p>
             <div class="hero-cta reveal">
                 <a href="#projects" class="btn btn-primary">
@@ -87,7 +87,7 @@
     <div class="currently-building">
         <div class="container">
             <span class="currently-building-dot"></span>
-            Currently Building &rarr; AI Observability Platform &middot; Writing at pranavkrishna.hashnode.dev
+            Currently Building &rarr; MergeSignal (pre-merge risk intelligence) &middot; Writing at pranavkrishna.hashnode.dev
         </div>
     </div>
 
@@ -98,13 +98,14 @@
             <div class="about-grid">
                 <div class="about-text reveal">
                     <p class="about-lead">
-                        AI &amp; Backend Engineer with <strong>2 years of production experience</strong> building
-                        autonomous AI agents, backend systems, and LLM pipelines.
+                        Backend engineer with <strong>2.5 years of applied experience</strong> (1+ year full-time)
+                        designing distributed backends on <strong>Python, AWS, and Postgres</strong> —
+                        with multimodal LLM features integrated into them safely.
                     </p>
                     <p>
-                        Currently at <strong>Oovacha</strong>, automating clinical data workflows across
-                        27 trial sites. Previously at <strong>Mushroom Solutions</strong> building
-                        deep learning classification systems.
+                        Currently at <strong>Oovacha</strong>, promoted from intern to Software Engineer in Sep 2025 —
+                        with systems running across <strong>27 production deployments</strong> in a regulated environment.
+                        Previously at <strong>Mushroom Solutions</strong> across ML and full-stack.
                     </p>
                     <p>
                         Based in <strong>Hyderabad, India</strong>. B.Tech in Computer Science &amp; Engineering
@@ -117,27 +118,25 @@
                 </div>
                 <div class="stats-grid reveal">
                     <div class="stat-card">
-                        <span class="stat-number" data-target="3">0</span>
-                        <span class="stat-label">AI Agents Shipped</span>
-                        <span class="stat-sublabel">In production</span>
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Production AI Agents</span>
+                        <span class="stat-sublabel">Shipped at Oovacha</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="27">0</span>
+                        <span class="stat-label">Production Deployments</span>
+                        <span class="stat-sublabel">Live in regulated environments</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-number">78.6K</span>
                         <span class="stat-suffix">+</span>
                         <span class="stat-label">Records Processed</span>
-                        <span class="stat-sublabel">Clinical data</span>
+                        <span class="stat-sublabel">In production pipelines</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" data-target="22">0</span>
-                        <span class="stat-suffix"> hrs/week</span>
-                        <span class="stat-label">Time Automated</span>
-                        <span class="stat-sublabel">Manual work eliminated</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">97.8</span>
-                        <span class="stat-suffix">%</span>
-                        <span class="stat-label">Model Accuracy</span>
-                        <span class="stat-sublabel">Peak classification</span>
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Skill Packs Authored</span>
+                        <span class="stat-sublabel">On the Claude Agent SDK</span>
                     </div>
                 </div>
             </div>
@@ -161,14 +160,14 @@
                             <span class="timeline-date">Sep 2025 &mdash; Present</span>
                         </div>
                         <ul class="timeline-points">
-                            <li>Built <strong>3 autonomous AI agent systems</strong> from scratch &mdash; an inline clinical query agent, an EDC validation engine, and a Claude-powered multi-tool framework &mdash; now live across <strong>27 clinical trial sites</strong></li>
-                            <li>Designed and shipped a <strong>message-driven validation pipeline</strong> processing <strong>78.6K+ clinical records</strong> against 77 configurable rules, catching discrepancies before human reviewers ever see them</li>
-                            <li>Selected <strong>SQS over direct API calls</strong> to guarantee message durability and decouple processing load from clinical data ingestion</li>
-                            <li>Architected backend infrastructure across <strong>AWS ECS Fargate, Aurora PostgreSQL, SQS, S3, and Cognito</strong></li>
-                            <li>Integrated custom <strong>MCP servers</strong> into AI pipelines, enabling natural language querying of production clinical databases</li>
+                            <li>Architected a <strong>6-phase distributed pipeline</strong> (SQS + ECS Fargate, S3-synced state, Postgres JSONB checkpointing) turning long-form domain PDFs into validated persist SQL &mdash; multi-hour jobs with checkpoint-resume, DLQ, retry classification, and fail-closed validation on every write.</li>
+                            <li>Designed and own end-to-end a <strong>multi-endpoint onboarding API backend</strong> with a monotonic 5-stage state machine, single-transaction multi-table writes, tenant-scoped RBAC (cross-tenant probes collapse to 404), and AWS Step Function orchestration &mdash; every write audit-logged for regulatory compliance.</li>
+                            <li>Wired <strong>multimodal LLM components</strong> into the pipeline (vision + text via Amazon Bedrock + Claude Agent SDK) &mdash; authored <strong>15 modular agent capability packs</strong> and shipped <strong>8 production agents</strong>, each fenced by deterministic Python guards and a golden-regression eval that gates every prompt change before merge.</li>
+                            <li>Built a queue-driven validation pipeline processing <strong>78.6K+ records</strong> against 77 configurable rules on ECS + SQS + Aurora + S3 + Cognito; integrated custom <strong>MCP servers</strong> so non-technical users query the domain database in natural language.</li>
+                            <li>Live across <strong>27 clinical trial sites</strong> in production.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>Python</span><span>Claude API</span><span>MCP</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span><span>SQS</span>
+                            <span>Python</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span><span>Amazon Bedrock</span><span>Claude Agent SDK</span><span>MCP</span><span>SQS</span><span>Step Functions</span>
                         </div>
                     </div>
                 </div>
@@ -198,12 +197,13 @@
                     <div class="timeline-card">
                         <div class="timeline-header">
                             <div>
-                                <h3 class="timeline-role">ML Engineer Intern</h3>
+                                <h3 class="timeline-role">Software Engineer Intern</h3>
                                 <p class="timeline-company">Mushroom Solutions</p>
                             </div>
                             <span class="timeline-date">Mar 2024 &mdash; Mar 2025</span>
                         </div>
                         <ul class="timeline-points">
+                            <li>12-month internship &mdash; promoted from <strong>Full-stack Developer Intern</strong> to <strong>ML Engineer Intern</strong> in Sep 2024.</li>
                             <li>Trained deep learning classification models hitting <strong>97.8% accuracy</strong> on 15,400+ records &mdash; automated 17 workflows, eliminating <strong>22 hrs/week</strong> of manual processing</li>
                             <li>Built an intelligent <strong>RAG chatbot</strong> combining Azure AI Search + FAISS with Redis caching, serving <strong>5,000 queries/day</strong></li>
                             <li>Shipped <strong>Django REST APIs</strong> with role-based access control, serving ML inference across 4 internal teams</li>
@@ -233,6 +233,36 @@
             <div class="projects-grid project-group" data-group="work">
 
                 <div class="project-card project-card--purple reveal">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </div>
+                        <h3 class="project-title">Multimodal Manifest Pipeline</h3>
+                        <p class="project-description">6-phase SQS-driven ECS pipeline turning long-form domain PDFs + N vendor spec PDFs into a validated data-collection manifest and idempotent persist SQL. Combines Claude Opus vision (multi-page table extraction at 230 DPI) with deterministic pdftotext parsing for row-precision data. Fail-closed validation on every LLM write; signed-override path for high-trust data.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Amazon Bedrock</span><span>Claude Agent SDK</span><span>SQS</span><span>ECS Fargate</span><span>S3</span>
+                        </div>
+                        <p class="project-repo-note">Proprietary — no public repo</p>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <div class="project-card project-card--cyan reveal">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3 class="project-title">Study Onboarding Backend</h3>
+                        <p class="project-description">Multi-endpoint API backend with a monotonic 5-stage state machine, single-transaction 8-table skeleton writer, tenant-scoped RBAC (cross-tenant probes collapse to 404), and AWS Step Function orchestration for downstream provisioning. Every write structured-audit-logged for regulatory compliance.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Step Functions</span><span>Lambda</span><span>Secrets Manager</span>
+                        </div>
+                        <p class="project-repo-note">Proprietary — no public repo</p>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <div class="project-card project-card--orange reveal">
                     <div class="project-card-inner">
                         <div class="project-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93V12h3.5a2.75 2.75 0 0 1 2.75 2.75v1.32A4 4 0 0 1 17 24a4 4 0 0 1-2-7.46v-1.79h-6v1.79A4 4 0 0 1 7 24a4 4 0 0 1-2-7.46v-1.79A2.75 2.75 0 0 1 7.75 12h3.5V9.93A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
@@ -362,7 +392,7 @@
                         <h3 class="project-title">Plum Ops AI</h3>
                         <p class="project-description">Production-grade insurance ops RAG assistant built as proof-of-work for Plum's AI Automation Engineer role. Redis job queue for Claude API calls, Pinecone vector search, claims triage classifier, PostgreSQL analytics dashboard. Load tested to 2,000+ req/min on cached endpoints.</p>
                         <div class="project-tech">
-                            <span>FastAPI</span><span>Claude Haiku</span><span>Pinecone</span><span>Redis</span><span>PostgreSQL</span><span>Next.js</span>
+                            <span>FastAPI</span><span>Pinecone</span><span>Redis</span><span>PostgreSQL</span><span>Next.js</span>
                         </div>
                         <a href="https://github.com/pranavkrishnadanda/plum-ops-ai" class="project-github-link" target="_blank" rel="noopener">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -406,13 +436,15 @@
                         AI &amp; Agents
                     </h3>
                     <div class="skill-tags">
-                        <span class="skill-tag skill-primary">Python</span>
-                        <span class="skill-tag skill-primary">Claude API</span>
+                        <span class="skill-tag skill-primary">Amazon Bedrock</span>
+                        <span class="skill-tag skill-primary">Claude Agent SDK</span>
                         <span class="skill-tag skill-primary">MCP Protocol</span>
+                        <span class="skill-tag skill-primary">Multimodal LLMs</span>
                         <span class="skill-tag skill-primary">Autonomous Agents</span>
+                        <span class="skill-tag skill-secondary">RAG</span>
                         <span class="skill-tag skill-secondary">FAISS</span>
-                        <span class="skill-tag skill-secondary">Hugging Face</span>
                         <span class="skill-tag skill-secondary">Azure AI Search</span>
+                        <span class="skill-tag skill-secondary">LlamaIndex</span>
                         <span class="skill-tag skill-familiar">TensorFlow</span>
                         <span class="skill-tag skill-familiar">Keras</span>
                     </div>
@@ -425,10 +457,11 @@
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag skill-primary">FastAPI</span>
+                        <span class="skill-tag skill-primary">Flask</span>
                         <span class="skill-tag skill-primary">REST APIs</span>
-                        <span class="skill-tag skill-primary">SQLAlchemy</span>
+                        <span class="skill-tag skill-primary">Pydantic</span>
+                        <span class="skill-tag skill-secondary">SQLAlchemy</span>
                         <span class="skill-tag skill-secondary">Django</span>
-                        <span class="skill-tag skill-secondary">Flask</span>
                     </div>
                 </div>
 
@@ -439,10 +472,14 @@
                     </h3>
                     <div class="skill-tags">
                         <span class="skill-tag skill-primary">AWS ECS Fargate</span>
+                        <span class="skill-tag skill-primary">AWS Lambda</span>
+                        <span class="skill-tag skill-primary">Step Functions</span>
                         <span class="skill-tag skill-primary">SQS</span>
                         <span class="skill-tag skill-primary">Aurora PostgreSQL</span>
                         <span class="skill-tag skill-secondary">S3</span>
                         <span class="skill-tag skill-secondary">Cognito</span>
+                        <span class="skill-tag skill-secondary">Secrets Manager</span>
+                        <span class="skill-tag skill-secondary">CloudWatch</span>
                         <span class="skill-tag skill-familiar">Docker</span>
                     </div>
                 </div>
@@ -495,6 +532,20 @@
                 backend design decisions, and lessons from production AI systems.
             </p>
             <div class="blog-grid">
+                <a href="https://pranavkrishna.hashnode.dev/building-a-thinking-first-multi-agent-room-not-another-fake-agent-demo" class="blog-card blog-card--published reveal" target="_blank" rel="noopener">
+                    <div class="blog-card-header">
+                        <span class="blog-card-badge blog-card-badge--published">Published</span>
+                        <span class="blog-card-meta">Jul 2026</span>
+                    </div>
+                    <h3 class="blog-card-title">Building a Thinking-First Multi-Agent Room (Not Another Fake Agent Demo)</h3>
+                    <div class="blog-card-tags">
+                        <span>Multi-Agent</span><span>Architecture</span><span>Claude</span>
+                    </div>
+                    <div class="blog-card-read-link">
+                        Read post
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </div>
+                </a>
                 <a href="https://pranavkrishna.hashnode.dev/i-gave-an-ai-agent-access-to-a-production-database-here-s-what-actually-happened" class="blog-card blog-card--published reveal" target="_blank" rel="noopener">
                     <div class="blog-card-header">
                         <span class="blog-card-badge blog-card-badge--published">Published</span>
@@ -514,14 +565,7 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
                     <span class="blog-card-badge">Coming Soon</span>
-                    <h3 class="blog-card-title">How I Built a 3-Broker Kafka Cluster for Real-Time Anomaly Detection</h3>
-                </div>
-                <div class="blog-card blog-card--placeholder reveal">
-                    <div class="blog-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    </div>
-                    <span class="blog-card-badge">Coming Soon</span>
-                    <h3 class="blog-card-title">RAG in Production: What Nobody Tells You About Vector Search at Scale</h3>
+                    <h3 class="blog-card-title">Fail-Closed Validators for LLM Output: What Actually Caught Bugs</h3>
                 </div>
             </div>
             <div class="blog-subscribe reveal">
