@@ -157,14 +157,18 @@
                             <span class="timeline-date">Oct 2025 &mdash; Present</span>
                         </div>
                         <ul class="timeline-points">
-                            <li>Built the protocol-ingestion pipeline (Python, SQS, ECS Fargate) that turns trial-protocol PDFs into validated study configuration, with idempotent, row-locked re-runs; LLM output is accepted only after deterministic checks against the protocol and data spec.</li>
-                            <li>Built the study-onboarding API (Flask, PostgreSQL) with a forward-only 5-stage workflow and atomic setup, orchestrated with AWS Step Functions.</li>
-                            <li>Implemented the application layer of the FDA 21 CFR Part 11 audit trail (activity logs, audit API, SHA-256-hashed export) and closed a cross-tenant data leak with a fail-closed tenant guard, proven by two-tenant tests.</li>
-                            <li>Raised backend test coverage from <strong>82% to 95%</strong>; added golden-set tests that check LLM-extracted configuration against the protocol, which caught a run that silently dropped 18 scheduled lab tests.</li>
-                            <li>Built <strong>MCP servers</strong> for database queries and RAG search over 6,800+ pages of vendor docs (pgvector).</li>
+                            <li><strong>LLM extraction pipeline:</strong> built the protocol-ingestion pipeline (Python, SQS, ECS Fargate) that turns trial-protocol PDFs into validated study configuration. LLM output is accepted only after deterministic checks (the quote must exist in the protocol row, the code in the data spec), with a ranker and a human review gate; a single batched Bedrock mapping call cut a ~43-minute step to ~1 minute.</li>
+                            <li><strong>Vendor-data ingest:</strong> built the ingest path with a Flask API, AWS Step Functions and three ECS stages (download-parse, persist, validate). Job start is idempotent, the persist stage takes a Postgres advisory lock per tenant, study and spec and wraps each file in a SAVEPOINT, and CSV, XLSX and SAS files stream into clinical tables at ~17 MiB peak memory on a 50K-row benchmark.</li>
+                            <li><strong>Reconciliation:</strong> designed cumulative-file reconciliation that matches rows as a SHA-256 content-digest multiset: corrected rows are soft-deleted and re-inserted, unchanged rows cause zero writes, and deleted rows are never revived.</li>
+                            <li><strong>Study-onboarding API:</strong> built the onboarding backend (Flask, PostgreSQL) with a forward-only 5-stage workflow and atomic, single-transaction setup.</li>
+                            <li><strong>Compliance and security:</strong> implemented the application layer of the FDA 21 CFR Part 11 audit trail (activity logs, audit API, SHA-256-hashed export); closed a cross-tenant data leak with a fail-closed tenant guard on 6 API routes, proven by two-tenant tests; tightened IAM to single-action, single-resource policies.</li>
+                            <li><strong>Testing and code health:</strong> raised backend coverage from <strong>82% to 95%</strong>; the API suite grew from 659 to 4,478 tests (unit, integration, BDD), with a hidden shared-database dependency removed using Testcontainers; split a 1,776-line service module into Flask blueprints behind characterisation tests, removing about 9,500 lines of god-object code.</li>
+                            <li><strong>LLM evaluation:</strong> added golden-set tests that check LLM-extracted configuration against the protocol, which caught a run that silently dropped 18 scheduled lab tests.</li>
+                            <li><strong>Platform and front end:</strong> Next.js proxy and RBAC middleware validating Cognito sessions (token refresh, idle timeout, maintenance fallback); cut front-end Docker builds from 10+ minutes to 2m39s; root-caused an ECS health-check loop; Terraform for an ALB target group and IAM policies; MCP servers for database queries and RAG search over 6,800+ pages of vendor docs (pgvector).</li>
+                            <li>Built with AI coding agents (Claude) as part of the daily workflow; figures are from development and benchmark environments.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>Python</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span><span>Amazon Bedrock</span><span>Claude Agent SDK</span><span>MCP</span><span>SQS</span><span>Step Functions</span>
+                            <span>Python</span><span>Flask</span><span>AWS (ECS, SQS, Step Functions, Lambda)</span><span>PostgreSQL</span><span>Amazon Bedrock</span><span>MCP</span><span>Next.js</span><span>Terraform (ALB, IAM)</span><span>pytest</span>
                         </div>
                     </div>
                 </div>
@@ -180,11 +184,13 @@
                             <span class="timeline-date">Mar 2025 &mdash; Sep 2025</span>
                         </div>
                         <ul class="timeline-points">
-                            <li>Ramped up on clinical data systems and AWS infrastructure while contributing to the initial EDC validation pipeline</li>
-                            <li>Built tooling and test coverage for agent workflows; converted to full-time Software Engineer in Oct 2025</li>
+                            <li>Worked on the clinical-data validation engine and early Claude + MCP prototypes; added SQL and BDD test fixes to the validation APIs.</li>
+                            <li>Built the issue-resolution and query-management screens (Next.js, Flask), moving them from static JSON to live, study-scoped database APIs.</li>
+                            <li>Fixed a database connection-pool exhaustion and a resource leak, and added tenant, study and user scoping with role-based access to the APIs.</li>
+                            <li>Converted to full-time Software Engineer in Oct 2025.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <span>Python</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span>
+                            <span>Python</span><span>Flask</span><span>Next.js</span><span>PostgreSQL</span><span>BDD</span>
                         </div>
                     </div>
                 </div>
