@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranav Krishna Danda | Software Engineer</title>
-    <meta name="description" content="Software Engineer building production distributed systems on Python + AWS + Postgres — with multimodal LLM features wired in safely. 27 production deployments, 78.6K+ records processed. Open to full-time roles.">
+    <meta name="description" content="Software Engineer in Hyderabad with 1 year of full-time experience building Python backend services on AWS and Postgres, with LLM features checked by tests. Open to full-time roles.">
     <meta name="keywords" content="Software Engineer, Backend Engineer, Distributed Systems, Python, FastAPI, AWS, LLM, Claude Agent SDK, MCP, Pranav Krishna Danda">
     <meta name="author" content="Pranav Krishna Danda">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Pranav Krishna Danda | Software Engineer">
-    <meta property="og:description" content="Software Engineer building production distributed systems — REST APIs, queue workers, LLM features. 27 production deployments.">
+    <meta property="og:description" content="Software Engineer building Python backends on AWS — REST APIs, queue workers, LLM features with tests.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pranavkrishnadanda.in">
 
@@ -59,11 +59,11 @@
         </div>
         <div class="hero-grid-pattern"></div>
         <div class="container hero-content">
-            <p class="hero-greeting reveal">Software Engineer · Remote, India</p>
+            <p class="hero-greeting reveal">Software Engineer · Hyderabad, India</p>
             <h1 class="hero-name reveal">Pranav Krishna<br>Danda</h1>
             <p class="hero-description reveal">
-                Software engineer building AI agents and backend systems that work in the real world —
-                real users, real data, real pressure.
+                Software engineer building Python backend services on AWS, and LLM features
+                that are checked by tests before they ship.
             </p>
             <div class="hero-cta reveal">
                 <a href="#projects" class="btn btn-primary">
@@ -100,10 +100,10 @@
                         I like problems that look messy at first.
                     </p>
                     <p>
-                        I’m a software engineer based in India with <strong>2.5 years of applied experience</strong>
-                        building AI agents and distributed backends. Most recently at <strong>Oovacha</strong>, where
-                        systems I worked on run across <strong>27 production deployments</strong> in a regulated environment.
-                        Before that, I built ML pipelines, RAG chatbots, and Django APIs at <strong>Mushroom Solutions</strong>.
+                        I’m a software engineer in Hyderabad with <strong>1 year of full-time experience</strong>, after
+                        two engineering internships. At <strong>Oovacha</strong>, a US clinical-trial SaaS startup, I build
+                        Python backend services, queue pipelines and LLM features in a regulated (FDA 21 CFR Part 11) environment.
+                        Before that, I built ML models, a RAG chatbot and Django APIs as an intern at <strong>Mushroom Solutions</strong>.
                     </p>
                     <p>
                         I learn fastest by shipping, and I’m happiest on teams that move fast and debug out loud.
@@ -116,25 +116,24 @@
                 </div>
                 <div class="stats-grid reveal">
                     <div class="stat-card">
-                        <span class="stat-number" data-target="8">8</span>
-                        <span class="stat-label">Production AI Agents</span>
-                        <span class="stat-sublabel">Shipped at Oovacha</span>
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Backend Test Coverage</span>
+                        <span class="stat-sublabel">Raised from 82% at Oovacha</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" data-target="27">27</span>
-                        <span class="stat-label">Production Deployments</span>
-                        <span class="stat-sublabel">Live in regulated environments</span>
+                        <span class="stat-number">6,800+</span>
+                        <span class="stat-label">Pages Searchable</span>
+                        <span class="stat-sublabel">RAG over vendor docs via MCP (pgvector)</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">78.6K</span>
-                        <span class="stat-suffix">+</span>
-                        <span class="stat-label">Records Processed</span>
-                        <span class="stat-sublabel">In production pipelines</span>
+                        <span class="stat-number">643</span>
+                        <span class="stat-label">Tests</span>
+                        <span class="stat-sublabel">In MergeSignal, published on PyPI</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" data-target="15">15</span>
-                        <span class="stat-label">Skill Packs Authored</span>
-                        <span class="stat-sublabel">On the Claude Agent SDK</span>
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">AWS Open-Source Fix</span>
+                        <span class="stat-sublabel">boto/botocore #3803 (in review)</span>
                     </div>
                 </div>
             </div>
@@ -155,14 +154,14 @@
                                 <h3 class="timeline-role">Software Engineer</h3>
                                 <p class="timeline-company">Oovacha</p>
                             </div>
-                            <span class="timeline-date">Sep 2025 &mdash; Present</span>
+                            <span class="timeline-date">Oct 2025 &mdash; Present</span>
                         </div>
                         <ul class="timeline-points">
-                            <li>Architected a <strong>6-phase distributed pipeline</strong> (SQS + ECS Fargate, S3-synced state, Postgres JSONB checkpointing) turning long-form domain PDFs into validated persist SQL &mdash; multi-hour jobs with checkpoint-resume, DLQ, retry classification, and fail-closed validation on every write.</li>
-                            <li>Designed and own end-to-end a <strong>multi-endpoint onboarding API backend</strong> with a monotonic 5-stage state machine, single-transaction multi-table writes, tenant-scoped RBAC (cross-tenant probes collapse to 404), and AWS Step Function orchestration &mdash; every write audit-logged for regulatory compliance.</li>
-                            <li>Wired <strong>multimodal LLM components</strong> into the pipeline (vision + text via Amazon Bedrock + Claude Agent SDK) &mdash; authored <strong>15 modular agent capability packs</strong> and shipped <strong>8 production agents</strong>, each fenced by deterministic Python guards and a golden-regression eval that gates every prompt change before merge.</li>
-                            <li>Built a queue-driven validation pipeline processing <strong>78.6K+ records</strong> against 77 configurable rules on ECS + SQS + Aurora + S3 + Cognito; integrated custom <strong>MCP servers</strong> so non-technical users query the domain database in natural language.</li>
-                            <li>Live across <strong>27 clinical trial sites</strong> in production.</li>
+                            <li>Built the protocol-ingestion pipeline (Python, SQS, ECS Fargate) that turns trial-protocol PDFs into validated study configuration, with idempotent, row-locked re-runs; LLM output is accepted only after deterministic checks against the protocol and data spec.</li>
+                            <li>Built the study-onboarding API (Flask, PostgreSQL) with a forward-only 5-stage workflow and atomic setup, orchestrated with AWS Step Functions.</li>
+                            <li>Implemented the application layer of the FDA 21 CFR Part 11 audit trail (activity logs, audit API, SHA-256-hashed export) and closed a cross-tenant data leak with a fail-closed tenant guard, proven by two-tenant tests.</li>
+                            <li>Raised backend test coverage from <strong>82% to 95%</strong>; added golden-set tests that check LLM-extracted configuration against the protocol, which caught a run that silently dropped 18 scheduled lab tests.</li>
+                            <li>Built <strong>MCP servers</strong> for database queries and RAG search over 6,800+ pages of vendor docs (pgvector).</li>
                         </ul>
                         <div class="timeline-tags">
                             <span>Python</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span><span>Amazon Bedrock</span><span>Claude Agent SDK</span><span>MCP</span><span>SQS</span><span>Step Functions</span>
@@ -178,11 +177,11 @@
                                 <h3 class="timeline-role">Software Engineer Intern</h3>
                                 <p class="timeline-company">Oovacha</p>
                             </div>
-                            <span class="timeline-date">Mar 2025 &mdash; Aug 2025</span>
+                            <span class="timeline-date">Mar 2025 &mdash; Sep 2025</span>
                         </div>
                         <ul class="timeline-points">
                             <li>Ramped up on clinical data systems and AWS infrastructure while contributing to the initial EDC validation pipeline</li>
-                            <li>Built tooling and test coverage for agent workflows; promoted to full-time Software Engineer in Sep 2025</li>
+                            <li>Built tooling and test coverage for agent workflows; converted to full-time Software Engineer in Oct 2025</li>
                         </ul>
                         <div class="timeline-tags">
                             <span>Python</span><span>FastAPI</span><span>AWS</span><span>PostgreSQL</span>
@@ -265,8 +264,8 @@
                         <div class="project-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93V12h3.5a2.75 2.75 0 0 1 2.75 2.75v1.32A4 4 0 0 1 17 24a4 4 0 0 1-2-7.46v-1.79h-6v1.79A4 4 0 0 1 7 24a4 4 0 0 1-2-7.46v-1.79A2.75 2.75 0 0 1 7.75 12h3.5V9.93A4 4 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg>
                         </div>
-                        <h3 class="project-title">Clinical AI Agent Framework</h3>
-                        <p class="project-description">3 autonomous agents with tool execution, error recovery, and MCP-based natural language querying of production PostgreSQL databases.</p>
+                        <h3 class="project-title">MCP Data &amp; Docs Servers</h3>
+                        <p class="project-description">MCP servers that let the team query the study database and search 6,800+ pages of vendor documentation in natural language.</p>
                         <div class="project-tech">
                             <span>Python</span><span>Claude API</span><span>MCP</span><span>FastAPI</span>
                         </div>
@@ -281,7 +280,7 @@
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
                         </div>
                         <h3 class="project-title">EDC Validation Engine</h3>
-                        <p class="project-description">Message-driven 3-stage pipeline processing 78.6K+ clinical records against 77 configurable rules. SQS-backed for message durability.</p>
+                        <p class="project-description">Message-driven pipeline that validates clinical records against configurable rules. SQS-backed for message durability.</p>
                         <div class="project-tech">
                             <span>Python</span><span>SQS</span><span>PostgreSQL</span><span>AWS</span>
                         </div>
@@ -296,7 +295,7 @@
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                         </div>
                         <h3 class="project-title">RAG Search Platform</h3>
-                        <p class="project-description">Hybrid vector + keyword search behind Django APIs. 5,000 queries/day, sub-second latency across 10,000+ document corpus with Redis caching.</p>
+                        <p class="project-description">RAG chatbot behind Django APIs (Azure AI Search, FAISS, Redis caching) serving about 5,000 queries/day over 10,000+ documents (internship).</p>
                         <div class="project-tech">
                             <span>FAISS</span><span>Azure AI Search</span><span>Redis</span><span>Django</span>
                         </div>
@@ -333,8 +332,8 @@
                         <div class="project-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                         </div>
-                        <h3 class="project-title">Autonomous AI Coding Assistant</h3>
-                        <p class="project-description">MCP-powered coding assistant with file operations, intelligent code assistance, and project management. Built to explore agent tool-use patterns independently.</p>
+                        <h3 class="project-title">AI Coding Assistant (MCP)</h3>
+                        <p class="project-description">MCP-powered coding assistant with file operations, intelligent code assistance, and project management. Built to explore agent tool-use patterns.</p>
                         <div class="project-tech">
                             <span>Python</span><span>MCP</span><span>Claude API</span>
                         </div>
@@ -364,31 +363,13 @@
                     <div class="project-glow"></div>
                 </div>
 
-                <div class="project-card project-card--orange reveal">
-                    <div class="project-card-inner">
-                        <div class="project-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                        </div>
-                        <h3 class="project-title">Multimodal RAG System</h3>
-                        <p class="project-description">Retrieval system combining text and image embeddings for cross-modal document search and querying.</p>
-                        <div class="project-tech">
-                            <span>Python</span><span>Multimodal Embeddings</span><span>Vector DBs</span>
-                        </div>
-                        <a href="https://github.com/pranavkrishnadanda/Multimodal-Retrieval-Augmented-Generation-system" class="project-github-link" target="_blank" rel="noopener">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            View on GitHub
-                        </a>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-
                 <div class="project-card project-card--cyan reveal">
                     <div class="project-card-inner">
                         <div class="project-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
                         <h3 class="project-title">Plum Ops AI</h3>
-                        <p class="project-description">Production-grade insurance ops RAG assistant built as proof-of-work for Plum's AI Automation Engineer role. Redis job queue for Claude API calls, Pinecone vector search, claims triage classifier, PostgreSQL analytics dashboard. Load tested to 2,000+ req/min on cached endpoints.</p>
+                        <p class="project-description">Insurance-operations RAG assistant. Redis job queue for Claude API calls, Pinecone vector search, claims triage classifier, PostgreSQL analytics dashboard. Load tested to 2,000+ req/min on cached endpoints.</p>
                         <div class="project-tech">
                             <span>FastAPI</span><span>Pinecone</span><span>Redis</span><span>PostgreSQL</span><span>Next.js</span>
                         </div>
@@ -438,11 +419,10 @@
                         <span class="skill-tag skill-primary">Claude Agent SDK</span>
                         <span class="skill-tag skill-primary">MCP Protocol</span>
                         <span class="skill-tag skill-primary">Multimodal LLMs</span>
-                        <span class="skill-tag skill-primary">Autonomous Agents</span>
+                        <span class="skill-tag skill-primary">AI Agents</span>
                         <span class="skill-tag skill-secondary">RAG</span>
                         <span class="skill-tag skill-secondary">FAISS</span>
                         <span class="skill-tag skill-secondary">Azure AI Search</span>
-                        <span class="skill-tag skill-secondary">LlamaIndex</span>
                         <span class="skill-tag skill-familiar">TensorFlow</span>
                         <span class="skill-tag skill-familiar">Keras</span>
                     </div>
@@ -587,8 +567,8 @@
             <h2 class="section-label reveal">Let's Work Together</h2>
             <p class="contact-intro reveal">
                 I'm actively looking for full-time Software Engineer roles focused on
-                AI systems and backend infrastructure. Open to roles across India
-                and remote opportunities globally.
+                AI systems and backend infrastructure. Open to full-time roles
+                in Hyderabad and Bengaluru.
                 <br><br>
                 Response time: usually within 24 hours.
             </p>
@@ -613,7 +593,7 @@
             </div>
             <div class="contact-status reveal">
                 <span class="open-dot"></span>
-                Available for full-time roles &middot; Based in Andhra Pradesh, India
+                Available for full-time roles &middot; Based in Hyderabad, India
             </div>
         </div>
     </section>
